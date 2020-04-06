@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="#FBFDFE"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#FBFDFE"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:background="#FBFDFE"
+                    android:orientation="vertical">
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_margin="10dp"
+                            android:layout_marginTop="10dp"
+                            android:padding="5dp"
+                            android:text="Welcome User....."
+                            android:textSize="15sp" />
+                    </android.support.v7.widget.CardView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:padding="3dp"
+                        android:text="ALANG BAZZAR"
+                        android:textColor="#36454F"
+                        android:textStyle="bold" />
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp">
+
+                        <TextView
+                            android:id="@+id/title_full"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/thumbnail"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="10dp"
+                            android:padding="10dp"
+                            android:text="SSS"
+                            android:textColor="#36454F"
+                            android:textSize="15dp"
+                            android:textStyle="bold" />
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="10dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.5"
+
+                            >
+
+                            <com.android.volley.toolbox.NetworkImageView
+                                android:id="@+id/thumbnail"
+                                android:layout_width="match_parent"
+                                android:layout_height="200dp"
+                                android:layout_gravity="center_horizontal"
+                                android:scaleType="fitXY" />
+                        </RelativeLayout>
+                    </android.support.v7.widget.CardView>
+                    <!-- Movie Title -->
+
+
+                    <!-- Rating -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp">
+
+                        <ImageView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_marginTop="25dp"
+                            android:src="@drawable/rupee" />
+
+                        <TextView
+                            android:id="@+id/price"
+                            android:layout_width="150dp"
+                            android:layout_height="50dp"
+                            android:layout_below="@id/title"
+                            android:layout_marginTop="10dp"
+                            android:padding="5dp"
+                            android:text="SSSS"
+                            android:textColor="#36454F"
+                            android:textSize="35dp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                    <!-- Genre -->
+
+                    <!-- Release Year -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/rating"
+                        android:orientation="horizontal"
+                        android:weightSum="3"
+
+                        >
+
+                        <TextView
+                            android:id="@+id/quantity"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="2dp"
+                            android:layout_marginTop="10dp"
+                            android:padding="5dp"
+                            android:text="10"
+                            android:textColor="#36454F"
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_weight="1"
+                            android:padding="5dp"
+                            android:text="Items Left"
+                            android:textColor="#36454F"
+                            android:textSize="18dp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="15dp"
+                            android:text="Quantity"
+                            android:textColor="#36454F"
+
+                            android:textSize="25dp" />
+
+                        <LinearLayout
+                            android:layout_width="180dp"
+                            android:layout_height="30dp"
+                            android:layout_marginTop="17dp"
+                            android:background="@drawable/my_button_bg2">
+
+
+                            <Spinner
+                                android:id="@+id/noofitem"
+                                android:layout_width="200dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:scrollbarSize="10dp"/>
+
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:id="@+id/button_add"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/my_background_bg11"
+                        android:text="Add to cart" />
+
+                </android.support.v7.widget.CardView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="50dp"
+                    android:padding="5dp"
+                    android:text="Description"
+                    android:textColor="#36454F"
+                    android:textSize="25dp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:id="@+id/txt_detail1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="5dp"
+                            android:textSize="18dp" />
+                    </android.support.v7.widget.CardView>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:padding="5dp"
+                    android:text="About Seller"
+                    android:textColor="#36454F"
+                    android:textSize="25dp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:id="@+id/about_seller"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="25dp"
+                            android:paddingStart="5dp"
+                            android:textSize="18dp" />
+                    </android.support.v7.widget.CardView>
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</FrameLayout>
+

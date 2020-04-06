@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+>
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nv_home"
+            android:icon="@drawable/home"
+            android:title="Home" />
+        <item
+            android:id="@+id/nv_profile"
+            android:icon="@drawable/myprofile"
+            android:title="My Profile" />
+        <item
+            android:id="@+id/nv_shoping"
+            android:icon="@drawable/shop3"
+            android:title="Shoping" />
+        <item
+            android:id="@+id/nv_about"
+            android:icon="@drawable/aboutus4"
+            android:title="About Us" />
+        <item
+            android:id="@+id/nv_logout"
+            android:icon="@drawable/logout2"
+            android:title="Logout" />
+
+    </group>
+
+
+</menu>

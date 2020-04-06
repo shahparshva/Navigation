@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "697345695255",
+    "project_id": "navigation-2c4b3"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:697345695255:android:6a487109c3032704",
+        "android_client_info": {
+          "package_name": "com.example.hp.navigation"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "697345695255-vvmcqvl5ec7gcbuagod68uphtghtoasc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.hp.navigation",
+            "certificate_hash": "01c91bba163ff458e6837eaac34dbcf03c4f14e6"
+          }
+        },
+        {
+          "client_id": "697345695255-sq8apk123l11g1o04tq38cvrdqugm7kg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDRjR7hUkRGW2MJGwLD57GdgH-Jalyy3sU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

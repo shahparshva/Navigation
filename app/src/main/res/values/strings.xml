@@ -1,0 +1,70 @@
+<resources>
+    <string name="app_name">Navigation</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string-array name="array_country">
+
+        <item>Air Compraser</item>
+        <item>Air Conditioner</item>
+        <item>Air Pump</item>
+        <item>Air purifier</item>
+        <item>Air Blower</item>
+        <item>Boiler</item>
+        <item>Condenser</item>
+        <item>Drilling Machine</item>
+        <item>Chilling Units</item>
+        <item>Furniture</item>
+        <item>Table</item>
+        <item>Chair</item>
+        <item>Sofa</item>
+        <item>Water Pump</item>
+        <item>Fire Extantion</item>
+        <item>Crocary</item>
+        <item>Cupboards</item>
+        <item>Bracket</item>
+        <item>Bed</item>
+        <item>Dining Table</item>
+        <item>Door</item>
+        <item>Washing Machine</item>
+        <item>Wingchain</item>
+        <item>Recliners</item>
+        <item>Mattresses</item>
+        <item>Watch</item>
+        <item>Wall Clock</item>
+        <item>Study Desks</item>
+        <item>Banches</item>
+        <item>Machinary</item>
+        <item>Curtains</item>
+        <item>Fridge</item>
+        <item>Fan</item>
+        <item>Tubelights</item>
+        <item>Mini Boats</item>
+        <item>Life gards boats</item>
+        <item>Fishing Net</item>
+        <item>Swimming Costume</item>
+        <item>Fishing Sticks</item>
+        <item>Kitchen Item</item>
+        <item>Home Decor</item>
+        <item>Home Furnishing</item>
+        <item>Home Cleaning</item>
+        <item>Generator</item>
+        <item>Flower Pots</item>
+        <item>Flower Pots</item>
+        <item>Tv Cabinates</item>
+        <item>Sofa Beds</item>
+        <item>Electronics</item>
+        <item>Television</item>
+        <item>Heating Appliances</item>
+        <item>Cooling Appliances</item>
+        <item>Extention Board</item>
+
+
+    </string-array>
+    <string name="loading" />
+</resources>

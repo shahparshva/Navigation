@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+
+    >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        >
+
+                        <AutoCompleteTextView
+                            android:id="@+id/actv"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:background="@drawable/searchview"
+                            android:drawableRight="@android:drawable/ic_menu_search"
+                            android:hint="Search"
+
+                            android:maxLength="50"
+                            android:layout_margin="5dp"
+                            android:maxLines="1"
+                            android:padding="10dp"
+                            android:singleLine="true" />
+                    </android.support.v7.widget.CardView>
+
+                    <TextView
+                        android:id="@+id/textView6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="Shop By Category" />
+
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/recycler_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingTop="10dp" />
+
+
+                    <!--android:padding="10dp"-->
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:paddingTop="5dp"
+                >
+
+                <!--Item display from here-->
+                 <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:background="@drawable/back_home"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="133dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="35dp"
+                        android:layout_marginTop="38dp"
+                        android:text="Up to 40% off
+on Home &amp; Decor"
+                        android:textColor="#0F4D92"
+                        android:textSize="17sp" />
+
+                    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="160dp"
+                        android:layout_height="120dp"
+                        android:layout_marginLeft="27dp"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/home_decor"
+                        app:civ_border_color="#738678"
+                        app:civ_border_width="2dp" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:background="@drawable/back_home"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="133dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="35dp"
+                        android:layout_marginTop="38dp"
+                        android:text="Upcoming Deals
+on Furniture"
+                        android:textColor="#0F4D92"
+                        android:textSize="17sp" />
+
+                    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="160dp"
+                        android:layout_height="120dp"
+                        android:layout_marginLeft="27dp"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/furniture1"
+                        app:civ_border_color="#738678"
+                        app:civ_border_width="2dp" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:background="@drawable/back_home"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="133dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="35dp"
+                        android:layout_marginTop="38dp"
+                        android:text="Get Ready for Dinner"
+                        android:textColor="#0F4D92"
+                        android:textSize="17sp" />
+
+                    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="160dp"
+                        android:layout_height="120dp"
+                        android:layout_marginLeft="27dp"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/dining_table"
+                        app:civ_border_color="#738678"
+                        app:civ_border_width="2dp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="End of Season sale"
+                    android:textSize="20sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="13dp"
+                    android:textColor="#000"/>
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbars="none"
+                    android:background="@drawable/bg_offer">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+
+
+                        <ImageView
+                            android:layout_width="320dp"
+                            android:layout_height="170dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="20dp"
+                            android:background="@drawable/sell_image1"/>
+                        <ImageView
+                            android:layout_width="320dp"
+                            android:layout_height="170dp"
+                            android:layout_marginLeft="11dp"
+                            android:layout_marginTop="20dp"
+                            android:background="@drawable/h1"/>
+                        <ImageView
+                            android:layout_width="320dp"
+                            android:layout_height="170dp"
+                            android:layout_marginLeft="11dp"
+                            android:layout_marginTop="20dp"
+                            android:background="@drawable/h2"/>
+                      <!--  <ImageView
+                            android:layout_width="320dp"
+                            android:layout_height="170dp"
+                            android:layout_marginLeft="11dp"
+                            android:layout_marginTop="20dp"
+                            android:background="@drawable/sell_image1"/>
+                        <ImageView
+                            android:layout_width="320dp"
+                            android:layout_height="170dp"
+                            android:layout_marginLeft="11dp"
+                            android:layout_marginTop="20dp"
+                            android:background="@drawable/sell_image1"/>
+                        <ImageView
+                            android:layout_width="320dp"
+                            android:layout_height="170dp"
+                            android:layout_marginLeft="11dp"
+                            android:layout_marginTop="20dp"
+                            android:background="@drawable/sell_image1"/>-->
+
+
+
+
+
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:background="@drawable/back_home"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="133dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="35dp"
+                        android:layout_marginTop="38dp"
+                        android:text="Flat 30% off on Refrigerator"
+                        android:textColor="#0F4D92"
+                        android:textSize="17sp" />
+
+                    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="160dp"
+                        android:layout_height="120dp"
+                        android:layout_marginLeft="27dp"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/refrigerator"
+                        app:civ_border_color="#738678"
+                        app:civ_border_width="2dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:background="@drawable/back_home"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="133dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="35dp"
+                        android:layout_marginTop="38dp"
+                        android:text="It's time to Decorate Home"
+                        android:textColor="#0F4D92"
+                        android:textSize="17sp" />
+
+                    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="160dp"
+                        android:layout_height="120dp"
+                        android:layout_marginLeft="27dp"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/candle_holder"
+                        app:civ_border_color="#738678"
+                        app:civ_border_width="2dp" />
+
+                </LinearLayout>
+
+
+
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
