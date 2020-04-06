@@ -169,7 +169,7 @@ public class    Catagory_second extends Fragment {
 
                                 if(catagory_final.equals(catagory_from_jason)) {
                                     count++;
-                                    movieList.add(movie);
+                                        movieList.add(movie);
                                 }
 
                             } catch (JSONException e) {

@@ -3,6 +3,7 @@ package com.example.hp.navigation;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -16,6 +17,9 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.android.volley.toolbox.ImageLoader;
+import com.android.volley.toolbox.NetworkImageView;
+
 import java.util.ArrayList;
 
 import Fragment.profile;
@@ -25,12 +29,14 @@ import static android.content.Context.MODE_PRIVATE;
 public class HLVAdapter extends RecyclerView.Adapter<HLVAdapter.ViewHolder> {
 
     private ArrayList<String> alName;
-    ArrayList<Integer> alImage;
+    private ArrayList<String> alImage;
     Context context;
     FragmentTransaction ft;
 
 
-    public HLVAdapter(Context context, ArrayList<String> alName, ArrayList<Integer> alImage) {
+
+
+    public HLVAdapter(Context context, ArrayList<String> alName, ArrayList<String> alImage) {
         super();
         this.context = context;
         this.alName = alName;
@@ -47,8 +53,10 @@ public class HLVAdapter extends RecyclerView.Adapter<HLVAdapter.ViewHolder> {
 
     @Override
     public void onBindViewHolder(final ViewHolder viewHolder, final int i) {
+        ImageLoader imageloader = AppController.getInstance().getImageLoader();
         viewHolder.tvSpecies.setText(alName.get(i));
-        viewHolder.imgThumbnail.setImageResource(alImage.get(i));
+        String temp=alImage.get(i);
+        viewHolder.imgThumbnail.setImageUrl(temp,imageloader);
 
         viewHolder.setClickListener(new ItemClickListener() {
             @Override
@@ -113,13 +121,13 @@ public class HLVAdapter extends RecyclerView.Adapter<HLVAdapter.ViewHolder> {
 
     public static class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener, View.OnLongClickListener {
 
-        public ImageView imgThumbnail;
+        public NetworkImageView imgThumbnail;
         public TextView tvSpecies;
         private ItemClickListener clickListener;
 
         public ViewHolder(View itemView) {
             super(itemView);
-            imgThumbnail = (ImageView) itemView.findViewById(R.id.img_thumbnail);
+            imgThumbnail = (NetworkImageView) itemView.findViewById(R.id.img_thumbnail);
             tvSpecies = (TextView) itemView.findViewById(R.id.tv_species);
             itemView.setOnClickListener(this);
             itemView.setOnLongClickListener(this);

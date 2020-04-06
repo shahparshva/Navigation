@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.renderscript.Sampler;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTransaction;
 import android.util.Log;
@@ -18,6 +19,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.android.volley.toolbox.ImageLoader;
 import com.android.volley.toolbox.NetworkImageView;
@@ -89,6 +91,12 @@ public class catagory_adapter_second extends BaseAdapter {
         /*SharedPreferences prefs = context.getSharedPreferences("Login", MODE_PRIVATE);
         final String idName = prefs.getString("type","");
         Log.v("type+++++++++++"+idName,"");*/
+      //  Toast.makeText(activity,""+getItemId(position),Toast.LENGTH_SHORT).show();
+
+
+       // FloatingActionButton a=(FloatingActionButton)convertView.findViewById (R.id.fab);
+      /*  TextView textView=(TextView)convertView.findViewById(R.id.float_text);
+        textView.setText("1");*/
         addtocart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -147,6 +155,7 @@ public class catagory_adapter_second extends BaseAdapter {
             }
         });
         // getting movie data for the row
+
         catagory_second_modle m = movieItems.get(position);
 
         // thumbnail image
@@ -169,6 +178,8 @@ public class catagory_adapter_second extends BaseAdapter {
 		
 		// release year*/
         year.setText(String.valueOf(m.getYear()));
+
+
 
         return convertView;
     }

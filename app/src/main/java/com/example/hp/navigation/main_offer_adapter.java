@@ -2,6 +2,7 @@ package com.example.hp.navigation;
 
 import android.app.Activity;
 import android.content.Context;
+import android.net.Network;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,6 +10,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.android.volley.toolbox.NetworkImageView;
 import com.example.hp.navigation.R;
 
 import java.util.ArrayList;
@@ -34,7 +36,7 @@ public class main_offer_adapter extends ArrayAdapter<String>{
         View rowView= inflater.inflate(R.layout.grid_item_offer, null, true);
         TextView txtTitle = (TextView) rowView.findViewById(R.id.tv_species1);
 
-        ImageView imageView = (ImageView) rowView.findViewById(R.id.thumbnail);
+        ImageView imageView = (NetworkImageView) rowView.findViewById(R.id.thumbnail);
         try {
             txtTitle.setText(web.get(position));
 

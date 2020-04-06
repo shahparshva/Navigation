@@ -36,12 +36,15 @@ import Fragment.shoping;
 import Fragment.view_item_seller;
 
 public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+        implements NavigationView.OnNavigationItemSelectedListener  {
     private ProgressDialog pDialog;
     private GoogleApiClient mGoogleApiClient;
     FragmentManager fragmentManager;
-    public String type;
+    public String type="";
     home buyerhome;
+
+
+
 
 
     @Override
@@ -265,6 +268,7 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     protected void onStart() {
+        super.onStart();
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestEmail()
                 .build();
@@ -272,7 +276,6 @@ public class MainActivity extends AppCompatActivity
                 .addApi(Auth.GOOGLE_SIGN_IN_API, gso)
                 .build();
         mGoogleApiClient.connect();
-        super.onStart();
     }
 
 

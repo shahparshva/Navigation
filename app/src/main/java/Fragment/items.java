@@ -62,7 +62,7 @@ public class items extends Fragment implements AdapterView.OnItemSelectedListene
 
     private EditText edtname,edtprice,edtqty,edtdec,edtinfo;
 
-    private Bitmap bitmap;
+        private Bitmap bitmap;
 
     private int PICK_IMAGE_REQUEST = 1;
 

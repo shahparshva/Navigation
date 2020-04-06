@@ -1,5 +1,6 @@
 package com.example.hp.navigation;
 
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -12,6 +13,15 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.VolleyLog;
+import com.android.volley.toolbox.JsonArrayRequest;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.util.ArrayList;
 
 /**
@@ -21,6 +31,9 @@ import java.util.ArrayList;
 public class Catagory_first extends android.support.v4.app.Fragment {
     catagory_adapter_first c;
     ArrayList<String> name;
+    private ProgressDialog pDialog;
+    private static final String TAG =Catagory_first.class.getSimpleName();
+    private static final String url = "https://parshva.000webhostapp.com/JSONsecondcatagory.php";
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -31,13 +44,20 @@ public class Catagory_first extends android.support.v4.app.Fragment {
         //String desired_string = arguments.getString("catagory");
        // Log.v("helllllllllllllo",desired_string);
         SharedPreferences prefs = getActivity().getSharedPreferences("catagory_sub",Context.MODE_PRIVATE);
-        String desired_string=prefs.getString("subcatagory","");
+        final String desired_string=prefs.getString("subcatagory","");
 
             ListView list_catagory = (ListView) rootView.findViewById(R.id.list_cat);
             //String catagoryname= getIntent().getStringExtra("catagory");
             Log.v("catagory.....",desired_string);
             name = new ArrayList<>();
-            if (desired_string.equals("Home")) {
+
+
+        pDialog = new ProgressDialog(getActivity());
+        // Showing progress dialog before making http request
+        pDialog.setMessage("Loading...");
+        pDialog.show();
+        pDialog.setCancelable(false);
+           /* if (desired_string.equals("Home")) {
                 name.add("Bracket");
                 name.add("Kitchen Item");
                // name.add("fittings items");
@@ -106,7 +126,50 @@ public class Catagory_first extends android.support.v4.app.Fragment {
             else
             {
                 name.add("hello");
+            }*/
+
+
+        JsonArrayRequest movieReq = new JsonArrayRequest(url,
+                new Response.Listener<JSONArray>() {
+
+                    @Override
+                    public void onResponse(JSONArray response) {
+                        Log.d(TAG, response.toString());
+                        // hidePDialog();
+
+                        // Parsing json
+                        for (int i = 0; i < response.length(); i++) {
+                            try {
+
+                                JSONObject obj = response.getJSONObject(i);
+                                //Log.v("00000000000000000000000000000000000000","aaaaaaaaaaaaaaaaaaaa");
+                                if(desired_string.equals(obj.getString("catagory")))
+                                {
+                                    name.add(obj.getString("sub_catagory"));
+                                }
+
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                            }
+
+                        }
+                        pDialog.hide();
+                        c.notifyDataSetChanged();
+                        // notifying list adapter about data changes
+                        // so that it renders the list view with updated dgata
+                        //a.notifyDataSetChanged();
+                    }
+                }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                VolleyLog.d(TAG, "Error: 000000000000000000000000000000" + error.getMessage());
+                //hidePDialog();
+
             }
+        });
+
+
+        AppController.getInstance().addToRequestQueue(movieReq);
             //Log.v("nameeeeeee", String.valueOf(name));
             c= new catagory_adapter_first(rootView.getContext(),name);
         //Log.v("adapterrrrrr", String.valueOf(c));

@@ -1,33 +1,35 @@
 {
   "project_info": {
-    "project_number": "697345695255",
-    "project_id": "navigation-2c4b3"
+    "project_number": "879796365663",
+    "firebase_url": "https://alangbazaaar.firebaseio.com",
+    "project_id": "alangbazaaar",
+    "storage_bucket": "alangbazaaar.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:697345695255:android:6a487109c3032704",
+        "mobilesdk_app_id": "1:879796365663:android:6a487109c3032704",
         "android_client_info": {
           "package_name": "com.example.hp.navigation"
         }
       },
       "oauth_client": [
         {
-          "client_id": "697345695255-vvmcqvl5ec7gcbuagod68uphtghtoasc.apps.googleusercontent.com",
+          "client_id": "879796365663-ntvn7apseingsgeinh3htloo5ajefftv.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.example.hp.navigation",
-            "certificate_hash": "01c91bba163ff458e6837eaac34dbcf03c4f14e6"
+            "certificate_hash": "f89ee7bda15969105b1064dce689a469caf0f921"
           }
         },
         {
-          "client_id": "697345695255-sq8apk123l11g1o04tq38cvrdqugm7kg.apps.googleusercontent.com",
+          "client_id": "879796365663-eih2i59v5h1djeqv3lb1pikj1bu2jjnh.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDRjR7hUkRGW2MJGwLD57GdgH-Jalyy3sU"
+          "current_key": "AIzaSyBTMNOCBIUW48UXvhXvWb7-smJy_CaITAM"
         }
       ],
       "services": {
@@ -35,11 +37,16 @@
           "status": 1
         },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "879796365663-eih2i59v5h1djeqv3lb1pikj1bu2jjnh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         },
         "ads_service": {
-          "status": 1
+          "status": 2
         }
       }
     }

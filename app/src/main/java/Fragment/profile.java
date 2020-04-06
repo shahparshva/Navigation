@@ -3,6 +3,7 @@ package Fragment;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -86,7 +87,7 @@ public class profile extends Fragment
 
             try{
                 // changing action bar color
-                //  getActivity().getWindow().setStatusBarColor(Color.);
+                getActivity().getWindow().setStatusBarColor(Color.blue(5));
 
 
             }catch(NullPointerException ne){

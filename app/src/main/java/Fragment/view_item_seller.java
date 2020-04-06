@@ -55,8 +55,8 @@ public class view_item_seller extends Fragment {
         Log.v("type of user",prefs.getString("id",""));
         id= prefs.getString("id","");
         System.out.println("already have id"+id);
-        listView = (ListView)rootView. findViewById(R.id.view_item_listview_seller);
-        adapter = new selleritem_adapter(getActivity(),movieList);
+            listView = (ListView)rootView. findViewById(R.id.view_item_listview_seller);
+            adapter = new selleritem_adapter(getActivity(),movieList);
         listView.setAdapter(adapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override

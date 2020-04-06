@@ -105,7 +105,7 @@ public class GoogleBackgroundTask extends AsyncTask<String,Void,String> {
 
     }
     @Override
-    protected void onPostExecute(String result) {
+    protected void onPostExecute(String result)  {
 
 
          if(result.equals("User already exist"))

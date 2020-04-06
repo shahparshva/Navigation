@@ -22,6 +22,8 @@ public class about extends android.support.v4.app.Fragment
 {
 
     TextView email1;
+
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {

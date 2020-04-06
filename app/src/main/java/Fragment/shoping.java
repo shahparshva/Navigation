@@ -7,12 +7,14 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v7.widget.LinearLayoutManager;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.GridView;
+import android.widget.TextView;
 
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
@@ -128,6 +130,8 @@ private static final String TAG =Catagory_second.class.getSimpleName();
             }
         });
 
+        /*TextView textView=(TextView)rootView.findViewById(R.id.float_text);
+        textView.setText("1");*/
         pDialog = new ProgressDialog(getActivity());
         // Showing progress dialog before making http request
         pDialog.setMessage("Loading...");
@@ -186,6 +190,11 @@ private static final String TAG =Catagory_second.class.getSimpleName();
 
                         // notifying list adapter about data changes
                         // so that it renders the list view with updated dgata
+
+
+
+                       // listView_cat_second.setLayoutManager( new LinearLayoutManager(this));
+                        //a.notifyDataSetChanged();
                         a.notifyDataSetChanged();
                     }
                 }, new Response.ErrorListener() {
